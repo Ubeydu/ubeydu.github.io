@@ -134,6 +134,39 @@
           transform: translateY(0);
         }
       }
+      .vision-statement {
+        background: linear-gradient(120deg, #f3f4f6 0%, #e5e7eb 100%);
+        padding: 2rem;
+        border-radius: 1rem;
+        margin: 2rem 0;
+        position: relative;
+        border: 1px solid #e5e7eb;
+      }
+      .vision-statement::before {
+        content: "✨";
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        padding: 0 1rem;
+        font-size: 1.5rem;
+      }
+      .vision-statement p {
+        font-size: 1.25rem;
+        line-height: 1.8;
+        color: #1f2937;
+        margin: 0;
+      }
+      .vision-statement strong {
+        color: #1f2937;
+        font-weight: 700;
+        font-size: 1.3rem;
+      }
+      .highlight {
+        color: #3b82f6;
+        font-weight: 600;
+      }
     </style>
   </head>
   <body>
@@ -150,9 +183,15 @@
       <p>
         I'm starting to build <strong>TMB</strong> — a radically minimalist,
         anti-interruption messaging board for teams. It's early days, but the
-        vision is bold: replace internal email and IM with something calm,
-        clear, and focused.
       </p>
+      <div class="vision-statement">
+        <p>
+          vision is <strong>bold</strong>: replace internal email and IM with
+          something <span class="highlight">calm</span>,
+          <span class="highlight">clear</span>, and
+          <span class="highlight">focused</span>
+        </p>
+      </div>
       <p>
         I'm looking to connect with developers, designers, or marketers who find
         this exciting and want to collaborate in some way. I'm flexible — let's
