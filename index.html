@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Join Me – TMB</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -15,7 +15,7 @@
       body {
         margin: 0;
         font-family: "Inter", sans-serif;
-        background-color: #f9fafb;
+        background: linear-gradient(135deg, #f6f8fc 0%, #e9f0f7 100%);
         color: #111827;
         display: flex;
         flex-direction: column;
@@ -25,65 +25,104 @@
         padding: 2rem;
       }
       .container {
-        max-width: 500px;
+        max-width: 600px;
         width: 100%;
         text-align: center;
         background: white;
-        padding: 2rem;
-        border-radius: 1rem;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        padding: 3rem;
+        border-radius: 1.5rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        position: relative;
+        overflow: hidden;
+      }
+      .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      }
+      .intro {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .intro h2 {
+        font-size: 1.5rem;
+        color: #1f2937;
+        margin-bottom: 0.5rem;
+      }
+      .intro p {
+        color: #4b5563;
+        font-size: 1.1rem;
+        line-height: 1.6;
       }
       h1 {
-        font-size: 2rem;
-        margin-bottom: 0.75rem;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(90deg, #1f2937, #4b5563);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
       }
       p {
-        font-size: 1rem;
+        font-size: 1.1rem;
         margin-bottom: 1.5rem;
         color: #374151;
+        line-height: 1.7;
       }
       a.button {
         display: inline-block;
         margin-top: 1rem;
-        padding: 0.75rem 1.5rem;
-        background-color: #111827;
+        padding: 0.875rem 2rem;
+        background: linear-gradient(90deg, #1f2937, #374151);
         color: white;
         text-decoration: none;
         border-radius: 9999px;
         font-weight: 600;
-        transition: background-color 0.2s;
-        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
       a.button:hover {
-        background-color: #1f2937;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
       }
       .links {
-        margin-top: 2rem;
+        margin-top: 2.5rem;
         font-size: 0.875rem;
         color: #6b7280;
       }
       .links a {
-        color: #111827;
+        color: #1f2937;
         text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s;
       }
       .links a:hover {
-        text-decoration: underline;
+        color: #3b82f6;
       }
       .copy-message {
         display: none;
         margin-top: 1rem;
-        padding: 0.75rem;
+        padding: 1rem;
         background-color: #f3f4f6;
-        border-radius: 0.5rem;
+        border-radius: 0.75rem;
         color: #374151;
         font-size: 0.875rem;
         animation: fadeIn 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
       }
       .email-display {
-        margin-top: 0.5rem;
+        margin-top: 0.75rem;
         font-family: monospace;
         color: #4b5563;
         font-size: 0.875rem;
+        padding: 0.5rem;
+        background: #e5e7eb;
+        border-radius: 0.5rem;
+        display: inline-block;
       }
       @keyframes fadeIn {
         from {
@@ -99,6 +138,14 @@
   </head>
   <body>
     <div class="container">
+      <div class="intro">
+        <h2>Hi, I'm Ubeyd</h2>
+        <p>
+          A full-stack web developer passionate about building elegant,
+          user-friendly applications. I specialize in modern web technologies
+          and love creating solutions that make a difference.
+        </p>
+      </div>
       <h1>Building Something Different</h1>
       <p>
         I'm starting to build <strong>TMB</strong> — a radically minimalist,
