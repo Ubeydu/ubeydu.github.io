@@ -52,6 +52,7 @@
         border-radius: 9999px;
         font-weight: 600;
         transition: background-color 0.2s;
+        cursor: pointer;
       }
       a.button:hover {
         background-color: #1f2937;
@@ -67,6 +68,32 @@
       }
       .links a:hover {
         text-decoration: underline;
+      }
+      .copy-message {
+        display: none;
+        margin-top: 1rem;
+        padding: 0.75rem;
+        background-color: #f3f4f6;
+        border-radius: 0.5rem;
+        color: #374151;
+        font-size: 0.875rem;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+      .email-display {
+        margin-top: 0.5rem;
+        font-family: monospace;
+        color: #4b5563;
+        font-size: 0.875rem;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
@@ -84,7 +111,13 @@
         this exciting and want to collaborate in some way. I'm flexible — let's
         talk.
       </p>
-      <a class="button" href="mailto:u.keles@gmail.com">Contact Me</a>
+      <a class="button" id="contactButton" href="mailto:u.keles@gmail.com"
+        >Contact Me</a
+      >
+      <div id="copyMessage" class="copy-message">
+        You copied Ubeyd's email. You can paste it now anywhere.
+        <div class="email-display">u.keles@gmail.com</div>
+      </div>
       <div class="links">
         or connect via
         <a
@@ -94,5 +127,30 @@
         >
       </div>
     </div>
+
+    <script>
+      document
+        .getElementById("contactButton")
+        .addEventListener("click", function (e) {
+          // Check if it's a mobile device
+          if (
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+              navigator.userAgent
+            )
+          ) {
+            return; // Let the default mailto: behavior work on mobile
+          }
+
+          e.preventDefault();
+          const email = "u.keles@gmail.com";
+          navigator.clipboard.writeText(email).then(() => {
+            const copyMessage = document.getElementById("copyMessage");
+            copyMessage.style.display = "block";
+            setTimeout(() => {
+              copyMessage.style.display = "none";
+            }, 3000);
+          });
+        });
+    </script>
   </body>
 </html>
