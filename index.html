@@ -134,38 +134,42 @@
           transform: translateY(0);
         }
       }
+      .vision-heading {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: #1f2937;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.01em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+      .vision-emoji {
+        font-size: 1.7rem;
+        margin-right: 0.3rem;
+        filter: drop-shadow(0 2px 6px rgba(59, 130, 246, 0.15));
+        position: relative;
+        top: 2px;
+      }
       .vision-statement {
         background: linear-gradient(120deg, #f3f4f6 0%, #e5e7eb 100%);
         padding: 2rem;
         border-radius: 1rem;
-        margin: 2rem 0;
+        margin: 1rem 0 2rem 0;
         position: relative;
         border: 1px solid #e5e7eb;
-      }
-      .vision-statement::before {
-        content: "✨";
-        position: absolute;
-        top: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: white;
-        padding: 0 1rem;
-        font-size: 1.5rem;
       }
       .vision-statement p {
         font-size: 1.25rem;
         line-height: 1.8;
         color: #1f2937;
         margin: 0;
-      }
-      .vision-statement strong {
-        color: #1f2937;
-        font-weight: 700;
-        font-size: 1.3rem;
+        font-weight: 500;
       }
       .highlight {
         color: #3b82f6;
-        font-weight: 600;
+        font-weight: 700;
       }
     </style>
   </head>
@@ -182,12 +186,16 @@
       <h1>Building Something Different</h1>
       <p>
         I'm starting to build <strong>TMB</strong> — a radically minimalist,
-        anti-interruption messaging board for teams. It's early days, but the
+        anti-interruption messaging board for teams. It's early days, but
       </p>
+      <div class="vision-heading">
+        <span class="vision-emoji">✨</span> vision is
+        <span style="font-weight: 900">bold</span>:
+      </div>
       <div class="vision-statement">
         <p>
-          vision is <strong>bold</strong>: replace internal email and IM with
-          something <span class="highlight">calm</span>,
+          replace internal email and IM with something
+          <span class="highlight">calm</span>,
           <span class="highlight">clear</span>, and
           <span class="highlight">focused</span>
         </p>
